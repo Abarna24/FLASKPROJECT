@@ -35,7 +35,7 @@ hr {
 </style>
 </head>
 <body>
-<form method="POST", action="">
+<form method="POST", action="/">
     <div class="container">
     <hr>
      <div><label><b>Name</b></label><input type="text" name="name" size="15"/> <br></div>
@@ -50,13 +50,16 @@ hr {
          <input type="checkbox" id="PHP" name="PHP" value="PHP"/><label>PHP</label>
       </div>
         <div><input type="submit" class="subbtn" value="Add" /></div></div>
+    </div>
 
 </form>
-
 <h1>Details</h1>
-    {% for d in d %}
-      <p>{{d.detail1}}</p>
-    {% endfor %}
+{% for d in d %}
+    <p>{{d.id}}</p>
+    <p>{{d.name}}</p>
+    <p>{{d.phone}}</p>
+    <p>{{d.email}}</p>
+{% endfor %}
 </body>
 
 </html>
